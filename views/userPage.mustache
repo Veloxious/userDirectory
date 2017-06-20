@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  {{#users}}
+  <head>
+    <meta charset="utf-8">
+    <title>{{name}}</title>
+    <link rel=stylesheet href="/styles.css">
+    <meta name=viewport content=width=device-width, initial-scale=1>
+  </head>
+  <body class="user_page">
+    <div class="user_hero">
+      <div class="hero_top">
+        <img src="{{avatar}}" alt="">
+        <div class="name_stuff">
+          <h1>{{name}}</h1>
+          <div class="location">
+            {{#address.city}}
+              <div class="address">
+                {{address.city}}, {{address.country}}
+              </div>
+            {{/address.city}}
+            {{^address.city}}
+              <div class="address">
+                {{address.country}}
+              </div>
+            {{/address.city}}
+            {{#job}}
+              <div class="work">
+              | {{job}}, {{company}}
+              </div>
+            {{/job}}
+            {{^job}}
+              <div class="nowork">
+              | Avaliable for Hire
+              </div>
+            {{/job}}
+          </div>
+          <div class="contact">
+            {{email}} | {{phone}}
+          </div>
+        </div>
+      </div>
+      <div class="hero_bottom">
+        {{#university}}
+        <div class="education">
+          <strong>Education:</strong> {{university}}
+        </div>
+        {{/university}}
+        <div class="skills">
+          <strong>Skills:</strong>{{skills}}
+        </div>
+      </div>
+    </div>
+  </body>
+{{/users}}
+</html>

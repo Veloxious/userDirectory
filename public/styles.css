@@ -13,6 +13,8 @@ body {
   padding: 1%;
   align-content: center;
   box-sizing: border-box;
+  text-decoration: none;
+  color: black;
 }
 
 .user_block img{
@@ -26,4 +28,32 @@ body {
 
 h3{
   color: blue;
+}
+
+body.user_page{
+  display: flex;
+  flex-flow:column nowrap;
+  justify-content: center;
+}
+
+.user_hero{
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+}
+
+.hero_top img{
+ border-radius: 100%;
+ border:1px solid darkgrey;
+}
+
+.hero_top {
+  display: flex;
+  width: 80%;
+}
+
+.name_stuff{
+  width: 80%;
 }

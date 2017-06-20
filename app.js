@@ -10,8 +10,14 @@ app.set('views', './views')
 app.set('view engine', 'mustache')
 app.use(express.static(__dirname + '/public'))
 
-app.get('/index', function (req, res){
+app.get('/index/', function (req, res){
   res.render('index', {users :data.users})
+})
+
+app.get('/index/:id', function (req, res){
+  const id = req.params.id
+  const user = data.users[id-1]
+  res.render('userPage', {users :user})
 })
 
 app.listen(3000, function(){
