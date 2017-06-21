@@ -45,15 +45,33 @@ body.user_page{
 }
 
 .hero_top img{
- border-radius: 100%;
- border:1px solid darkgrey;
+  margin-right: 2%;
+  border-radius: 100%;
+  border:1px solid darkgrey;
 }
 
 .hero_top {
   display: flex;
   width: 80%;
+  padding-left: 15%;
+}
+.hero_bottom{
+  width: 40%;
 }
 
 .name_stuff{
   width: 80%;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+}
+
+.education{
+  padding-left: 15%;
+}
+
+.skills strong{
+  padding-left: 5%;
 }

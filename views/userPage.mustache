@@ -26,12 +26,12 @@
             {{/address.city}}
             {{#job}}
               <div class="work">
-              | {{job}}, {{company}}
+               {{job}}, {{company}}
               </div>
             {{/job}}
             {{^job}}
               <div class="nowork">
-              | Avaliable for Hire
+               Avaliable for Hire
               </div>
             {{/job}}
           </div>
@@ -47,7 +47,7 @@
         </div>
         {{/university}}
         <div class="skills">
-          <strong>Skills:</strong>{{skills}}
+          <strong>Skills:</strong>{{#skills}}{{.}}<br>{{/skills}}
         </div>
       </div>
     </div>
